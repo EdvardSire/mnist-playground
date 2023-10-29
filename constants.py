@@ -1,0 +1,6 @@
+__folder = "data/"
+DEVICE = "mps"
+TRAIN_IMAGES_PATH = f"{__folder}train-images-idx3-ubyte"
+TRAIN_LABELS_PATH = f"{__folder}train-labels-idx1-ubyte"
+TEST_IMAGES_PATH = f"{__folder}t10k-images-idx3-ubyte"
+TEST_LABELS_PATH = f"{__folder}t10k-labels-idx1-ubyte"
