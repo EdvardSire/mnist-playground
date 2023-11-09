@@ -3,6 +3,7 @@ import struct
 import numpy as np
 import torch
 from torch.utils.data import Dataset
+import cProfile
 
 
 class MnistGeneral(Dataset):
@@ -56,8 +57,12 @@ class MnistTest(MnistGeneral):
         super().__init__([TEST_IMAGES_PATH], [TEST_LABELS_PATH])
 
 
-if __name__ == "__main__":
+def main():
     image_paths = [TRAIN_IMAGES_PATH, TEST_IMAGES_PATH]
     label_paths = [TRAIN_LABELS_PATH, TEST_LABELS_PATH]
     m = MnistGeneral(image_paths, label_paths)
     print(len(m.images))
+
+
+if __name__ == "__main__":
+    cProfile.run("main()")
